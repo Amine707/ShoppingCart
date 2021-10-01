@@ -16,6 +16,11 @@ class Cart
         return $this->items;
     }
 
+    public function getItem(int $index)
+    {
+        return $this->items[$index];
+    }
+
     /**
      * @param \CartItem[] $items
      */

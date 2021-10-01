@@ -15,8 +15,7 @@ echo $cart->getTotalQuantity().PHP_EOL; // This must print 2
 echo "Total price of items in cart: ".PHP_EOL;
 echo $cart->getTotalSum().PHP_EOL; // This must print 2900
 
-$cartItem2->increaseQuantity();
-$cartItem2->increaseQuantity();
+$cart->getItem($product2->getId())->increaseQuantity(2);
 
 echo "Number of items in cart: ".PHP_EOL;
 echo $cart->getTotalQuantity().PHP_EOL; // This must print 4
@@ -27,7 +26,4 @@ echo $cart->getTotalSum().PHP_EOL; // This must print 3700
 $cart->removeProduct($product1);
 
 echo "Number of items in cart: ".PHP_EOL;
-echo $cart->getTotalQuantity().PHP_EOL; // This must print 4
-
-echo "Total price of items in cart: ".PHP_EOL;
-echo $cart->getTotalSum().PHP_EOL; // This must print 3700
+echo $cart->getTotalQuantity().PHP_EOL; // This must print 1
